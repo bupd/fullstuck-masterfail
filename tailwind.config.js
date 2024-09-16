@@ -7,9 +7,12 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      pacifico: ["Pacifico", "cursive"],
+    },
     extend: {
       colors: {
-        "action": "#F48A06",
+        action: "#F48A06",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
