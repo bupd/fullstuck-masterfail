@@ -1,10 +1,29 @@
+"use client";
+
+import "@vidstack/react/player/styles/default/theme.css";
+import "@vidstack/react/player/styles/base.css";
+import "@vidstack/react/player/styles/plyr/theme.css";
+import "@vidstack/react/player/styles/default/layouts/video.css";
+import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import {
+  PlyrLayout,
+  plyrLayoutIcons,
+} from "@vidstack/react/player/layouts/plyr";
+
+import {
+  defaultLayoutIcons,
+  DefaultVideoLayout,
+} from "@vidstack/react/player/layouts/default";
+
 import SwiperCard from "@/components/SwiperCard";
 import Image from "next/image";
+import ReactPlayer from "react-player";
+import YouTube from "react-youtube";
 export default function Home() {
   const previousRate = "2500";
   const rate = "999";
   const days = "99";
-  const DateOfSaleEnd = "23 Jun 2024"
+  const DateOfSaleEnd = "23 Jun 24";
   return (
     <>
       <div className="max-w-screen-xl mx-auto font-sans bg-neutral-950 text-white overflow-hidden">
@@ -17,8 +36,16 @@ export default function Home() {
           <h1>Masterclass</h1>
         </div>
 
+          <div className="max-w-screen-lg mx-auto">
+            <MediaPlayer autoPlay title="promo" src="youtube/IvqNxxRlpP0">
+              <MediaProvider />
+              <PlyrLayout
+                // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+                icons={plyrLayoutIcons}
+              />
+            </MediaPlayer>
+          </div>
         <div className="text-2xl my-8 font-bold mx-auto w-fit text-center bg-white h-full">
-          <h1>Video</h1>
         </div>
 
         <div className="text-lg my-4 font-thin text-slate-100 opacity-40 mx-auto w-fit text-center">
@@ -26,8 +53,8 @@ export default function Home() {
         </div>
 
         <div className="my-8 mx-auto w-fit font-semibold grid grid-cols-2 justify-center gap-4 px-4 text-center text-white items-center">
-{/* duration */}
-          <div className="bg-zinc-800 border h-[80px] w-[180px] flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
+          {/* duration */}
+          <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="2em"
@@ -41,27 +68,19 @@ export default function Home() {
             </svg>
 
             <div className="flex flex-col items-baseline justify-start">
-              <h1 className="text-center font-thin text-xl">Duration</h1>
+              <h1 className="text-center font-thin lg:text-xl">Duration</h1>
               <p className="text-lg font-semibold text-left">8 Hrs</p>
             </div>
           </div>
-{/* date */}
-          <div className="bg-zinc-800 border h-[80px] w-[180px] flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="#f59e0b"
-                d="m210.83 85.17l-56-56A4 4 0 0 0 152 28H56a12 12 0 0 0-12 12v72a4 4 0 0 0 8 0V40a4 4 0 0 1 4-4h92v52a4 4 0 0 0 4 4h52v124a4 4 0 0 1-4 4h-8a4 4 0 0 0 0 8h8a12 12 0 0 0 12-12V88a4 4 0 0 0-1.17-2.83M156 41.65L198.34 84H156Zm-2.06 106.85a4 4 0 0 0-4.06.11L124 164.78V160a12 12 0 0 0-12-12H48a12 12 0 0 0-12 12v48a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-4.78l25.88 16.17a4 4 0 0 0 2.12.61a4.06 4.06 0 0 0 1.94-.5A4 4 0 0 0 156 216v-64a4 4 0 0 0-2.06-3.5M116 208a4 4 0 0 1-4 4H48a4 4 0 0 1-4-4v-48a4 4 0 0 1 4-4h64a4 4 0 0 1 4 4Zm32 .78l-24-15v-19.56l24-15Z"
-              ></path>
-            </svg>
+          {/* date */}
+          <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
+            <img src="/calendar.svg" className="px-2 w-3/12" />
 
             <div className="flex flex-col items-baseline justify-start">
               <h1 className="text-center font-thin text-xl">Date</h1>
-              <p className="text-lg font-semibold text-left">{DateOfSaleEnd}</p>
+              <p className="text-lg font-semibold text-left pr-4">
+                {DateOfSaleEnd}
+              </p>
             </div>
           </div>
         </div>
@@ -69,16 +88,10 @@ export default function Home() {
         {/* buttons */}
         <div className="text-xl my-8 font-bold mx-auto w-fit text-center">
           <h1>Limited seats only</h1>
-          <div
-            class="button my-8 text-nowrap bg-blue-500  cursor-pointer select-none
-    active:translate-y-2  active:[box-shadow:0_0px_0_0_#1b6ff8,0_0px_0_0_#1b70f841]
-    active:border-b-[0px]
-    transition-all duration-150 [box-shadow:0_10px_0_0_#1b6ff8,0_15px_0_0_#1b70f841]
-    rounded-full  border-[1px] border-blue-400"
-          >
-            <span class="flex flex-col justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
+          <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+            <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
               Join Now
-              <span className="text-orange-100">₹999 only </span>
+              <span className="text-2xl"> ₹999 only </span>
             </span>
           </div>
 
@@ -89,7 +102,8 @@ export default function Home() {
           // <button className="bg-[#BD54FF] mt-4 text-lg text-white font-sans duration-500 px-8 py-1 hover:bg-blue-500 rounded-full text-nowrap">
           //   Join Now <span className="text-2xl">${rate}</span> only <br />{" "}
           //   <span className="line-through">${previousRate}</span>
-          // </button> */}
+          // </button>
+          // */}
         </div>
 
         <div className="my-8 font-thin text-slate-200 opacity-70 mx-auto w-fit text-center">
@@ -134,7 +148,7 @@ export default function Home() {
       <div className="max-w-screen-xl overflow-hidden text-white mx-auto bg-slate-900 font-sans">
         <div className="text-2xl py-8 pt-4 font-bold mx-auto w-fit text-center">
           <h1 className="py-8 px-2">Start Your Journey in Content Creation</h1>
-          <ol className="text-left pl-8 list-disc flex flex-col gap-2 text-lg font-normal text-slate-100 opacity-75">
+          <ol className="text-left pl-8 list-disc flex flex-col gap-2 text-lg font-normal text-slate-100 opacity-75 max-w-screen-lg">
             <li>
               When starting out, you'll handle everything for your Instagram
               page profile, posts, reels, and more.
@@ -175,9 +189,9 @@ export default function Home() {
           </div>
           <div className="bg-white rounded-2xl m-2 overflow-hidden hover:skew-y-3 hover:-skew-x-2 transition-all ease-in-out">
             <div className="hover:scale-110 transition-all flex items-center justify-center duration-200 cursor-pointer flex-col">
-              <img src="/graphicDesigners.png" />
+              <img src="/Housewives.png" />
               <p className="text-center py-3 font-bold text-indigo-800 text-2xl">
-                Graphic Designers
+                Housewifes
               </p>
             </div>
           </div>
@@ -207,9 +221,9 @@ export default function Home() {
           </div>
           <div className="bg-white rounded-2xl m-2 overflow-hidden hover:skew-y-3 hover:-skew-x-2 transition-all ease-in-out">
             <div className="hover:scale-110 transition-all flex items-center justify-center duration-200 cursor-pointer flex-col">
-              <img src="/Housewives.png" />
+              <img src="/graphicDesigners.png" />
               <p className="text-center py-3 font-bold text-indigo-800 text-2xl">
-                Housewives
+                Graphic Designing
               </p>
             </div>
           </div>
