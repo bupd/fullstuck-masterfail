@@ -26,15 +26,16 @@ export default function Home() {
   const DateOfSaleEnd = "23 Jun 24";
   return (
     <>
-      <div className="max-w-screen-xl mx-auto font-sans bg-neutral-950 text-white overflow-hidden">
-        <div className="text-2xl my-8 font-bold mx-auto w-fit text-center uppercase">
-          <h1>No views! no followers! no revenue</h1>
-          <h1>don't worry</h1>
-        </div>
-        <div className="text-2xl my-8 font-bold mx-auto w-fit text-center">
-          <h1>Full Stack Creator</h1>
-          <h1>Masterclass</h1>
-        </div>
+      <div className="bg-neutral-950">
+        <div className="max-w-screen-xl mx-auto font-sans bg-neutral-950 text-white overflow-hidden">
+          <div className="text-2xl my-8 font-bold mx-auto w-fit text-center uppercase">
+            <h1>No views! no followers! no revenue</h1>
+            <h1>don't worry</h1>
+          </div>
+          <div className="text-2xl my-8 font-bold mx-auto w-fit text-center">
+            <h1>Full Stack Creator</h1>
+            <h1>Masterclass</h1>
+          </div>
 
           <div className="max-w-screen-lg mx-auto">
             <MediaPlayer autoPlay title="promo" src="youtube/IvqNxxRlpP0">
@@ -45,87 +46,87 @@ export default function Home() {
               />
             </MediaPlayer>
           </div>
-        <div className="text-2xl my-8 font-bold mx-auto w-fit text-center bg-white h-full">
-        </div>
+          <div className="text-2xl my-8 font-bold mx-auto w-fit text-center bg-white h-full"></div>
 
-        <div className="text-lg my-4 font-thin text-slate-100 opacity-40 mx-auto w-fit text-center">
-          <h1>Beginner To Pro</h1>
-        </div>
+          <div className="text-lg my-4 font-thin text-slate-100 opacity-40 mx-auto w-fit text-center">
+            <h1>Beginner To Pro</h1>
+          </div>
 
-        <div className="my-8 mx-auto w-fit font-semibold grid grid-cols-2 justify-center gap-4 px-4 text-center text-white items-center">
-          {/* duration */}
-          <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="#f59e0b"
-                d="m210.83 85.17l-56-56A4 4 0 0 0 152 28H56a12 12 0 0 0-12 12v72a4 4 0 0 0 8 0V40a4 4 0 0 1 4-4h92v52a4 4 0 0 0 4 4h52v124a4 4 0 0 1-4 4h-8a4 4 0 0 0 0 8h8a12 12 0 0 0 12-12V88a4 4 0 0 0-1.17-2.83M156 41.65L198.34 84H156Zm-2.06 106.85a4 4 0 0 0-4.06.11L124 164.78V160a12 12 0 0 0-12-12H48a12 12 0 0 0-12 12v48a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-4.78l25.88 16.17a4 4 0 0 0 2.12.61a4.06 4.06 0 0 0 1.94-.5A4 4 0 0 0 156 216v-64a4 4 0 0 0-2.06-3.5M116 208a4 4 0 0 1-4 4H48a4 4 0 0 1-4-4v-48a4 4 0 0 1 4-4h64a4 4 0 0 1 4 4Zm32 .78l-24-15v-19.56l24-15Z"
-              ></path>
-            </svg>
+          <div className="my-8 mx-auto w-fit font-semibold grid grid-cols-2 justify-center gap-4 px-4 text-center text-white items-center">
+            {/* duration */}
+            <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="#f59e0b"
+                  d="m210.83 85.17l-56-56A4 4 0 0 0 152 28H56a12 12 0 0 0-12 12v72a4 4 0 0 0 8 0V40a4 4 0 0 1 4-4h92v52a4 4 0 0 0 4 4h52v124a4 4 0 0 1-4 4h-8a4 4 0 0 0 0 8h8a12 12 0 0 0 12-12V88a4 4 0 0 0-1.17-2.83M156 41.65L198.34 84H156Zm-2.06 106.85a4 4 0 0 0-4.06.11L124 164.78V160a12 12 0 0 0-12-12H48a12 12 0 0 0-12 12v48a12 12 0 0 0 12 12h64a12 12 0 0 0 12-12v-4.78l25.88 16.17a4 4 0 0 0 2.12.61a4.06 4.06 0 0 0 1.94-.5A4 4 0 0 0 156 216v-64a4 4 0 0 0-2.06-3.5M116 208a4 4 0 0 1-4 4H48a4 4 0 0 1-4-4v-48a4 4 0 0 1 4-4h64a4 4 0 0 1 4 4Zm32 .78l-24-15v-19.56l24-15Z"
+                ></path>
+              </svg>
 
-            <div className="flex flex-col items-baseline justify-start">
-              <h1 className="text-center font-thin lg:text-xl">Duration</h1>
-              <p className="text-lg font-semibold text-left">8 Hrs</p>
+              <div className="flex flex-col items-baseline justify-start">
+                <h1 className="text-center font-thin lg:text-xl">Duration</h1>
+                <p className="text-lg font-semibold text-left">8 Hrs</p>
+              </div>
+            </div>
+            {/* date */}
+            <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
+              <img src="/calendar.svg" className="px-2 w-3/12" />
+
+              <div className="flex flex-col items-baseline justify-start">
+                <h1 className="text-center font-thin text-xl">Date</h1>
+                <p className="text-lg font-semibold text-left pr-4">
+                  {DateOfSaleEnd}
+                </p>
+              </div>
             </div>
           </div>
-          {/* date */}
-          <div className="bg-zinc-800 border h-[80px] lg:w-[180px] w-full flex flex-row gap-4 items-center justify-center mx-auto rounded-2xl">
-            <img src="/calendar.svg" className="px-2 w-3/12" />
 
-            <div className="flex flex-col items-baseline justify-start">
-              <h1 className="text-center font-thin text-xl">Date</h1>
-              <p className="text-lg font-semibold text-left pr-4">
-                {DateOfSaleEnd}
-              </p>
+          {/* buttons */}
+          <div className="text-xl my-8 font-bold mx-auto w-fit text-center">
+            <h1>Limited seats only</h1>
+            <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+              <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
+                Join Now
+                <span className="text-2xl"> ₹999 only </span>
+              </span>
             </div>
-          </div>
-        </div>
 
-        {/* buttons */}
-        <div className="text-xl my-8 font-bold mx-auto w-fit text-center">
-          <h1>Limited seats only</h1>
-          <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
-            <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
-              Join Now
-              <span className="text-2xl"> ₹999 only </span>
+            <span className="line-through text-slate-300 text-sm">
+              Price: ₹2500
             </span>
-          </div>
-
-          <span className="line-through text-slate-300 text-sm">
-            Price: ₹2500
-          </span>
-          {/*
+            {/*
           // <button className="bg-[#BD54FF] mt-4 text-lg text-white font-sans duration-500 px-8 py-1 hover:bg-blue-500 rounded-full text-nowrap">
           //   Join Now <span className="text-2xl">${rate}</span> only <br />{" "}
           //   <span className="line-through">${previousRate}</span>
           // </button>
           // */}
-        </div>
+          </div>
 
-        <div className="my-8 font-thin text-slate-200 opacity-70 mx-auto w-fit text-center">
-          <h1>Offer ends in</h1>
-        </div>
+          <div className="my-8 font-thin text-slate-200 opacity-70 mx-auto w-fit text-center">
+            <h1>Offer ends in</h1>
+          </div>
 
-        <div className="my-8 font-semibold grid grid-cols-4 gap-4 px-4 text-center text-white">
-          <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-            <h1 className="text-center text-4xl">{days}</h1>
-            <p className="text-sm font-thin">days</p>
-          </div>
-          <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-            <h1 className="text-center text-4xl">{days}</h1>
-            <p className="text-sm font-thin">hours</p>
-          </div>
-          <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-            <h1 className="text-center text-4xl">{days}</h1>
-            <p className="text-sm font-thin">minutes</p>
-          </div>
-          <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-            <h1 className="text-center text-4xl">{days}</h1>
-            <p className="text-sm font-thin">seconds</p>
+          <div className="my-8 font-semibold grid grid-cols-4 gap-4 px-4 text-center text-white">
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{days}</h1>
+              <p className="text-sm font-thin">days</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{days}</h1>
+              <p className="text-sm font-thin">hours</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{days}</h1>
+              <p className="text-sm font-thin">minutes</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{days}</h1>
+              <p className="text-sm font-thin">seconds</p>
+            </div>
           </div>
         </div>
       </div>
