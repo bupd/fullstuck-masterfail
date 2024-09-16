@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.1",
+    "@vidstack/react": "^1.12.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.438.0",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18",
+    "react-player": "^2.16.0",
+    "react-youtube": "^10.1.0",
     "swiper": "^11.1.12",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
