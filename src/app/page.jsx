@@ -19,6 +19,7 @@ import SwiperCard from "@/components/SwiperCard";
 import Image from "next/image";
 import ReactPlayer from "react-player";
 import YouTube from "react-youtube";
+import Footer from "./Footer";
 export default function Home() {
   const previousRate = "2500";
   const rate = "999";
@@ -37,22 +38,24 @@ export default function Home() {
             <h1>Masterclass</h1>
           </div>
 
-          <div className="max-w-screen-lg flex flex-col gap-10 mx-auto">
-            <iframe
+          <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
+            <iframe className="lg:rounded-3xl rounded-2xl"
               src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview"
               allow="autoplay"
             ></iframe>
-            <MediaPlayer title="promo" src="youtube/IvqNxxRlpP0">
-              <MediaProvider />
-              <PlyrLayout
-                // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
-                icons={plyrLayoutIcons}
-              />
-            </MediaPlayer>
+            {/*
+            // <MediaPlayer title="promo" src="youtube/IvqNxxRlpP0">
+            //   <MediaProvider />
+            //   <PlyrLayout
+            //     // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
+            //     icons={plyrLayoutIcons}
+            //   />
+            // </MediaPlayer>
+            */}
           </div>
           <div className="text-2xl my-8 font-bold mx-auto w-fit text-center bg-white h-full"></div>
 
-          <div className="text-lg my-4 font-thin text-slate-100 opacity-40 mx-auto w-fit text-center">
+          <div className="text-xl my-4 font-medium text-slate-300 opacity-90 mx-auto w-fit text-center">
             <h1>Beginner To Pro</h1>
           </div>
 
@@ -92,6 +95,9 @@ export default function Home() {
           {/* buttons */}
           <div className="text-xl my-8 font-bold mx-auto w-fit text-center select-none">
             <h1>Limited seats only</h1>
+            <span className="line-through text-slate-300 text-lg">
+              Price: ₹5999
+            </span>
             <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
               <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
                 Join Now
@@ -99,9 +105,6 @@ export default function Home() {
               </span>
             </div>
 
-            <span className="line-through text-slate-300 text-sm">
-              Price: ₹2500
-            </span>
             {/*
           // <button className="bg-[#BD54FF] mt-4 text-lg text-white font-sans duration-500 px-8 py-1 hover:bg-blue-500 rounded-full text-nowrap">
           //   Join Now <span className="text-2xl">${rate}</span> only <br />{" "}
@@ -110,7 +113,7 @@ export default function Home() {
           // */}
           </div>
 
-          <div className="my-8 font-thin text-slate-200 opacity-70 mx-auto w-fit text-center">
+          <div className="my-12 font-medium text-slate-300 text-4xl opacity-90 mx-auto w-fit text-center">
             <h1>Offer ends in</h1>
           </div>
 
@@ -153,8 +156,8 @@ export default function Home() {
         </div>
         <div className="max-w-screen-xl overflow-hidden text-white mx-auto bg-slate-900 font-sans">
           <div className="text-2xl py-8 pt-4 font-bold mx-auto w-fit text-center">
-            <h1 className="py-8 px-2">
-              Start Your Journey in Content Creation
+            <h1 className="py-8 px-2 text-4xl">
+              Start Your Journey in Content Creation  ✨
             </h1>
             <ol className="text-left pl-8 list-disc flex flex-col gap-2 text-lg font-normal text-slate-100 opacity-75 max-w-screen-lg">
               <li>
@@ -184,7 +187,7 @@ export default function Home() {
 
           <h1 className="pt-12 pb-0 text-center font-bold text-4xl">
             Whom this <span className="text-amber-500">mastery course </span>is
-            for ?
+            for 🤔 ?
           </h1>
 
           <div className="grid lg:grid-cols-4 grid-cols-2 gap-4 lg:m-20 pt-4 px-4">
@@ -259,7 +262,7 @@ export default function Home() {
       <div className="bg-slate-950">
         <div className="max-w-screen-xl text-white mx-auto py-8 bg-slate-950 font-sans">
           <h1 className="py-12 text-center font-bold text-4xl">
-            What will <span className="text-amber-500">you learn </span>?
+            What will <span className="text-amber-500">you learn 📚 </span>?
           </h1>
           <p className="text-center text-lg">
             This very extraordinary feature, can make learning activities more
@@ -464,6 +467,28 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="bg-slate-900">
+        <div className="max-w-screen-lg mx-auto text-white lg:p-16 lg:pb-20 py-12 px-4">
+          <h1 className="pb-12 text-center font-bold text-4xl">
+            Who Am <span className="text-amber-500 font-pacifico">I?</span>
+          </h1>
+          <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 mx-auto items-center justify-center">
+            <img src="/profile.jpg" className="rounded-2xl hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50 hover:skew-x-2"/>
+            <p className="text-xl px-4 text-justify max-w-screen-lg mx-auto lg:col-span-3">
+              I'm Nirmal, and I've been working in a studio for the past four
+              years. During this time, I've mastered the art of creating videos
+              from scratch—starting with scripting, then videography, and
+              finally editing until the video is ready to captivate an audience.
+              I started my journey with just 150 rupees per month, but I've gone
+              on to earn more than I ever imagined. Realizing that marketing is
+              the crucial final step in the video production process, I decided
+              to leverage my skills and started two successful businesses. Now,
+              I'm excited to share the extensive knowledge I've gained from my
+              studio experience with you.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="bg-slate-950">
         <div className="max-w-screen-xl mx-auto text-white bg-slate-950">
           <h1 className="py-12 text-center font-bold text-4xl">
@@ -479,25 +504,24 @@ export default function Home() {
         <div className="max-w-screen-xl text-white flex flex-col items-center mx-auto bg-slate-950 font-sans py-12">
           <h1 className="py-12 text-center font-bold text-4xl">
             What I get from this{" "}
-            <span className="text-amber-500">masterclass </span>?
+            <span className="text-amber-500">masterclass💡</span>?
           </h1>
           <ol className="pl-12 text-wrap list-decimal flex flex-col justify-center gap-2  font-normal text-slate-100 opacity-85 text-2xl">
-            <li>Trending assets pack worth 3,999.</li>
-            <li>Content creation mastery ebook worth 2,999.</li>
-            <li>Ai tools pdf worth 1,999.</li>
+            <li>Trending assets pack worth <span className="underline decoration-amber-500"> ₹3,999.</span></li>
+            <li>Content creation mastery ebook worth<span className="underline decoration-amber-500"> ₹2,999.</span></li>
+            <li>Ai tools pdf worth <span className="underline decoration-amber-500">₹1,999.</span></li>
             <li>Placement- partime.</li>
             <li>Community Access.</li>
             <li>1-1 page review.</li>
             <li>Certificate.</li>
           </ol>
         </div>
-        <div className="max-w-screen-xl text-white overflow-hidden mx-auto py-12 bg-slate-950 px-16">
+        <div className="max-w-screen-xl text-white overflow-hidden mx-auto py-12 bg-slate-950 lg:px-16 px-4">
           <h1 className="py-12 text-center font-bold text-4xl">
             Join the{" "}
             <span className="text-amber-500">
-              Full Stack Creator Masterclass{" "}
+              Full Stack Creator Masterclass {"  🎓"}
             </span>
-            ?
           </h1>
           <p className="text-justify text-xl pt-4 max-w-4xl mx-auto pb-8">
             Whether you're a beginner or looking to enhance your skills, this
@@ -508,6 +532,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
