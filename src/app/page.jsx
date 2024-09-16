@@ -38,6 +38,24 @@ export default function Home() {
           </div>
 
           <div className="max-w-screen-lg mx-auto">
+            <video
+              src="https://drive.google.com/uc?id=1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU"
+              controls
+            ></video>
+            <video width="320" height="240" controls>
+              <source
+                src="https://drive.google.com/uc?export=preview&id=1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <iframe
+              src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview"
+              allow="autoplay"
+            ></iframe>
+            <video>
+              <source src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview" />
+            </video>
             <MediaPlayer autoPlay title="promo" src="youtube/IvqNxxRlpP0">
               <MediaProvider />
               <PlyrLayout
