@@ -56,7 +56,7 @@ export default function Home() {
             <video>
               <source src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview" />
             </video>
-            <MediaPlayer autoPlay title="promo" src="youtube/IvqNxxRlpP0">
+            <MediaPlayer title="promo" src="youtube/IvqNxxRlpP0">
               <MediaProvider />
               <PlyrLayout
                 // thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
 
           {/* buttons */}
-          <div className="text-xl my-8 font-bold mx-auto w-fit text-center">
+          <div className="text-xl my-8 font-bold mx-auto w-fit text-center select-none">
             <h1>Limited seats only</h1>
             <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
               <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
