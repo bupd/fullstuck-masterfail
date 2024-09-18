@@ -4,21 +4,7 @@ import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/base.css";
 import "@vidstack/react/player/styles/plyr/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
-import { MediaPlayer, MediaProvider } from "@vidstack/react";
-import {
-  PlyrLayout,
-  plyrLayoutIcons,
-} from "@vidstack/react/player/layouts/plyr";
-
-import {
-  defaultLayoutIcons,
-  DefaultVideoLayout,
-} from "@vidstack/react/player/layouts/default";
-
 import SwiperCard from "@/components/SwiperCard";
-import Image from "next/image";
-import ReactPlayer from "react-player";
-import YouTube from "react-youtube";
 import Footer from "./Footer";
 export default function Home() {
   const previousRate = "2500";
