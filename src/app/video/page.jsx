@@ -1,3 +1,6 @@
+"use client";
+import MuxPlayer from "@mux/mux-player-react";
+
 export default function Video() {
   return (
     <>
@@ -12,6 +15,10 @@ export default function Video() {
             <h1>Masterclass</h1>
           </div>
         </div>
+
+        <MuxPlayer
+          playbackId="lk6FddE3nTrxqG1601MNiQoGunCp02ZLS8nwO3ps6GGDM"
+        />
       </div>
     </>
   );
