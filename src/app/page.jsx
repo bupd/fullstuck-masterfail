@@ -25,7 +25,8 @@ export default function Home() {
           </div>
 
           <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
-            <iframe className="lg:rounded-3xl rounded-2xl"
+            <iframe
+              className="lg:rounded-3xl rounded-2xl"
               src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview"
               allow="autoplay"
             ></iframe>
@@ -85,7 +86,7 @@ export default function Home() {
               Price: ₹5999
             </span>
             <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
-              <span class="flex flex-row gap-2 justify-center items-center px-8 py-2 h-full text-white font-bold text-lg">
+              <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
                 Join Now
                 <span className="text-2xl"> ₹999 only </span>
               </span>
@@ -143,7 +144,7 @@ export default function Home() {
         <div className="max-w-screen-xl overflow-hidden text-white mx-auto bg-slate-900 font-sans">
           <div className="text-2xl py-8 pt-4 font-bold mx-auto w-fit text-center">
             <h1 className="py-8 px-2 text-4xl">
-              Start Your Journey in Content Creation  ✨
+              Start Your Journey in Content Creation ✨
             </h1>
             <ol className="text-left pl-8 list-disc flex flex-col gap-2 text-lg font-normal text-slate-100 opacity-75 max-w-screen-lg">
               <li>
@@ -459,7 +460,10 @@ export default function Home() {
             Who Am <span className="text-amber-500 font-pacifico">I?</span>
           </h1>
           <div className="grid lg:grid-cols-4 grid-cols-1 gap-8 mx-auto items-center justify-center">
-            <img src="/profile.jpg" className="rounded-2xl hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50 hover:skew-x-2"/>
+            <img
+              src="/profile.jpg"
+              className="rounded-2xl hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50 hover:skew-x-2"
+            />
             <p className="text-xl px-4 text-justify max-w-screen-lg mx-auto lg:col-span-3">
               I'm Nirmal, and I've been working in a studio for the past four
               years. During this time, I've mastered the art of creating videos
@@ -493,22 +497,25 @@ export default function Home() {
             <span className="text-amber-500">masterclass💡</span>?
           </h1>
           <ol className="pl-12 text-wrap list-decimal flex flex-col justify-center gap-2  font-normal text-slate-100 opacity-85 text-2xl">
-            <li>Trending assets pack worth <span className="underline decoration-amber-500"> ₹3,999.</span></li>
-            <li>Content creation mastery ebook worth<span className="underline decoration-amber-500"> ₹2,999.</span></li>
-            <li>Ai tools pdf worth <span className="underline decoration-amber-500">₹1,999.</span></li>
+            <li>
+              Trending assets pack worth{" "}
+              <span className="underline decoration-amber-500"> ₹3,999.</span>
+            </li>
+            <li>
+              Content creation mastery ebook worth
+              <span className="underline decoration-amber-500"> ₹2,999.</span>
+            </li>
+            <li>
+              Ai tools pdf worth{" "}
+              <span className="underline decoration-amber-500">₹1,999.</span>
+            </li>
             <li>Placement- partime.</li>
             <li>Community Access.</li>
             <li>1-1 page review.</li>
             <li>Certificate.</li>
           </ol>
         </div>
-        <div className="max-w-screen-xl text-white overflow-hidden mx-auto py-12 bg-slate-950 lg:px-16 px-4">
-          <h1 className="py-12 text-center font-bold text-4xl">
-            Join the{" "}
-            <span className="text-amber-500">
-              Full Stack Creator Masterclass {"  🎓"}
-            </span>
-          </h1>
+        <div className="max-w-screen-xl text-white overflow-hidden mx-auto py-8 bg-slate-950 lg:px-16 px-4">
           <p className="text-justify text-xl pt-4 max-w-4xl mx-auto pb-8">
             Whether you're a beginner or looking to enhance your skills, this
             masterclass provides a complete roadmap to becoming a successful
@@ -516,6 +523,12 @@ export default function Home() {
             thriving business. Join the Full Stack Creator Masterclass and
             transform your creative journey today.
           </p>
+          <div class="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+            <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
+              Join Now
+              <span className="text-2xl"> ₹999 only </span>
+            </span>
+          </div>
         </div>
       </div>
       <Footer />
