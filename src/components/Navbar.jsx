@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
         {/* Hamburger Icon */}
         <button
           onClick={toggleMenu}
-          className="text-3xl cursor-pointer px-2 block lg:hidden z-50"  // Added z-index to ensure it's clickable
+          className="text-3xl cursor-pointer px-2 block lg:hidden z-50" // Added z-index to ensure it's clickable
         >
           {isOpen ? (
             <svg
@@ -67,7 +68,10 @@ const Navbar = () => {
           </a>
         </li>
         <li className="mx-4 my-6 lg:m-0">
-          <a href="#services" className="text-xl hover:text-cyan-500 duration-500">
+          <a
+            href="#services"
+            className="text-xl hover:text-cyan-500 duration-500"
+          >
             Our Services
           </a>
         </li>
@@ -77,33 +81,52 @@ const Navbar = () => {
           </a>
         </li>
         <li className="mx-4 my-6 lg:m-0">
-          <a href="#industry" className="text-xl hover:text-cyan-500 duration-500">
+          <a
+            href="#industry"
+            className="text-xl hover:text-cyan-500 duration-500"
+          >
             Industry
           </a>
         </li>
         <li className="mx-4 my-6 lg:m-0">
-          <a href="#testimonial" className="text-xl hover:text-cyan-500 duration-500">
+          <a
+            href="#testimonial"
+            className="text-xl hover:text-cyan-500 duration-500"
+          >
             Testimonials
           </a>
         </li>
         <li className="mx-4 my-6 lg:m-0">
-          <a href="#contact" className="text-xl hover:text-cyan-500 duration-500">
+          <a
+            href="#contact"
+            className="text-xl hover:text-cyan-500 duration-500"
+          >
             Contact Us
           </a>
         </li>
 
-        {/* "Let's Talk" button for mobile view */}
+        {/* "Sign In /Up" button for mobile view */}
         <li className="mx-4 my-6 lg:my-0 lg:hidden">
           <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-4 hover:bg-blue-500 rounded-full text-nowrap">
-            Let's Talk
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
           </button>
         </li>
       </ul>
 
-      {/* "Let's Talk" button for desktop view */}
+      {/* "Sign In /Up" button for desktop view */}
       <li className="mx-4 my-6 lg:m-0 hidden lg:block font-bold">
         <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-3 hover:bg-slate-500 rounded-full text-nowrap">
-          Let's Talk
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </button>
       </li>
     </div>
