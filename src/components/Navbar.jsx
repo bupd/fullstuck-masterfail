@@ -21,39 +21,52 @@ const Navbar = () => {
           <p className="font-extrabold text-2xl">Nirmal</p>
         </a>
 
-        {/* Hamburger Icon */}
-        <button
-          onClick={toggleMenu}
-          className="text-3xl cursor-pointer px-2 block lg:hidden z-50" // Added z-index to ensure it's clickable
-        >
-          {isOpen ? (
-            <svg
-              className="cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="currentColor"
-                d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"
-              ></path>
-            </svg>
-          ) : (
-            <svg
-              className="cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 256 256"
-            >
-              <path
-                fill="currentColor"
-                d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8M40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16m176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16"
-              ></path>
-            </svg>
-          )}
-        </button>
+        <div className="flex flex-row lg:hidden">
+          <div className="mx-4 my-6 lg:my-0 lg:hidden">
+            <SignedOut>
+              <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-4 hover:bg-blue-500 rounded-full text-nowrap">
+                <SignInButton />
+              </button>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </div>
+          {/* Hamburger Icon */}
+          <button
+            onClick={toggleMenu}
+            className="text-3xl cursor-pointer px-2 block lg:hidden z-50" // Added z-index to ensure it's clickable
+          >
+            {isOpen ? (
+              <svg
+                className="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="currentColor"
+                  d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"
+                ></path>
+              </svg>
+            ) : (
+              <svg
+                className="cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="currentColor"
+                  d="M224 128a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8M40 72h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16m176 112H40a8 8 0 0 0 0 16h176a8 8 0 0 0 0-16"
+                ></path>
+              </svg>
+            )}
+          </button>
+
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -106,28 +119,18 @@ const Navbar = () => {
         </li>
 
         {/* "Sign In /Up" button for mobile view */}
-        <li className="mx-4 my-6 lg:my-0 lg:hidden">
-          <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-4 hover:bg-blue-500 rounded-full text-nowrap">
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </button>
-        </li>
       </ul>
 
       {/* "Sign In /Up" button for desktop view */}
       <li className="mx-4 my-6 lg:m-0 hidden lg:block font-bold">
-        <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-3 hover:bg-slate-500 rounded-full text-nowrap">
-          <SignedOut>
+        <SignedOut>
+          <button className="bg-[#BD54FF] text-white font-sans duration-500 px-5 py-3 hover:bg-slate-500 rounded-full text-nowrap">
             <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-        </button>
+          </button>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </li>
     </div>
   );
