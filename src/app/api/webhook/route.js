@@ -9,6 +9,8 @@ export async function POST(req) {
 
     // Process the webhook request here
     console.log('Webhook received:', data.data.order.customer_details);
+    // to-do: store in the mongodb
+    //
 
     return NextResponse.json({ message: 'Webhook received!' }, { status: 200 });
   } catch (error) {
