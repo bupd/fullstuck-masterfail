@@ -85,14 +85,13 @@ export default function Home() {
             <span className="line-through text-slate-300 text-lg">
               Price: ₹5999
             </span>
-            <a
-              href="https://payments-test.cashfree.com/forms/fullstacktest-pay"
-              class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
-            >
-              <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
-                Join Now
-                <span className="text-2xl"> ₹999 only </span>
-              </span>
+            <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
+              <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+                <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
+                  Join Now
+                  <span className="text-2xl"> ₹999 only </span>
+                </span>
+              </div>
             </a>
 
             {/*
@@ -526,14 +525,16 @@ export default function Home() {
             thriving business. Join the Full Stack Creator Masterclass and
             transform your creative journey today.
           </p>
-          <a
-            href="https://payments-test.cashfree.com/forms/fullstacktest-pay"
-            class="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
-          >
-            <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
-              Join Now
-              <span className="text-2xl"> ₹999 only </span>
-            </span>
+          <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
+            <div
+              href="https://payments-test.cashfree.com/forms/fullstacktest-pay"
+              class="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
+            >
+              <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
+                Join Now
+                <span className="text-2xl"> ₹999 only </span>
+              </span>
+            </div>
           </a>
         </div>
       </div>
