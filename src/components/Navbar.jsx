@@ -17,7 +17,7 @@ const Navbar = () => {
           href="/"
           className="text-2xl font-sans cursor-pointer flex items-center"
         >
-          <img alt="logo" className="lg:h-14 h-10 inline" src="/favicon.ico" />
+          <img alt="logo" className="lg:h-14 h-10 inline rounded-full mx-4" src="/favicon.ico" />
           <p className="font-extrabold text-2xl">Nirmal</p>
         </a>
 
@@ -71,12 +71,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <ul
-        className={`menu transition-all ease-in-out duration-500 lg:flex lg:ml-5 lg:items-center lg:z-auto lg:mx-2 lg:static absolute w-full left-0 lg:w-fit lg:gap-3 xl:gap-10 lg:flex-row lg:py-0 py-4 lg:pl-0 pl-7 bg-black lg:bg-transparent z-40 ${
+        className={`menu transition-all ease-in-out duration-500 lg:flex lg:ml-5 lg:items-center lg:z-40 lg:mx-2 lg:static absolute w-full left-0 lg:w-fit lg:gap-3 xl:gap-10 lg:flex-row lg:py-0 py-4 lg:pl-0 pl-7 bg-black lg:bg-transparent z-40 ${
           isOpen ? "top-[80px] opacity-100" : "top-[-400px] opacity-0"
         }`}
       >
         <li className="mx-4 my-6 lg:m-0">
-          <a href="/" className="text-xl hover:text-cyan-500 duration-500">
+          <a href="/" className="text-xl text-white hover:text-cyan-500 duration-500">
             Home
           </a>
         </li>
