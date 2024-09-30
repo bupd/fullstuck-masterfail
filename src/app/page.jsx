@@ -27,7 +27,7 @@ export default function Home() {
           <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
             <iframe
               className="lg:rounded-3xl rounded-2xl"
-              src="https://drive.google.com/file/d/1WYwfRgpKzv4qrdYwX-vuihPHnj30-YcU/preview"
+              src="https://drive.google.com/file/d/1phQeoBcc_bokaQZcXnz9uHBG5BB6Y4MA/preview"
               allow="autoplay"
             ></iframe>
             {/*
