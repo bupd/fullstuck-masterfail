@@ -6,6 +6,7 @@ import "@vidstack/react/player/styles/plyr/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 import SwiperCard from "@/components/SwiperCard";
 import Footer from "./Footer";
+import VideoPlayer from "@/components/VideoPlayer";
 export default function Home() {
   const previousRate = "2500";
   const rate = "999";
