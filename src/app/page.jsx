@@ -6,7 +6,7 @@ import "@vidstack/react/player/styles/plyr/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 import SwiperCard from "@/components/SwiperCard";
 import Footer from "./Footer";
-import VideoPlayer from "@/components/VideoPlayer";
+// import VideoPlayer from "@/components/VideoPlayer";
 export default function Home() {
   const previousRate = "2500";
   const rate = "999";
@@ -87,8 +87,8 @@ export default function Home() {
               Price: ₹5999
             </span>
             <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
-              <div class="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
-                <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
+              <div className="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+                <span className="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
                   Join Now
                   <span className="text-2xl"> ₹999 only </span>
                 </span>
@@ -529,9 +529,9 @@ export default function Home() {
           <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
             <div
               href="https://payments-test.cashfree.com/forms/fullstacktest-pay"
-              class="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
+              className="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
             >
-              <span class="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
+              <span className="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
                 Join Now
                 <span className="text-2xl"> ₹999 only </span>
               </span>
