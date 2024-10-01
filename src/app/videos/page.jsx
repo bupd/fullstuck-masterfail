@@ -18,21 +18,72 @@ export default function VideoList() {
   // Define an array of video sources
   const videos = [
     {
-      title: "kumar",
+      title: "1-Mindset",
       src: "https://storage.googleapis.com/fullstackcreator/videos/1-Mindset.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
-      src: "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4",
+      title: "2-Business",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/2-Business.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
-      src: "https://storage.googleapis.com/fullstackcreator/videos/1-Mindset.mp4",
+      title: "3-Marketing",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/3-Marketing.mp4",
       type: "video/mp4",
       size: 1080,
     },
+    {
+      title: "4-Sales",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/4-Sales.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "5-Branding",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/5-Branding.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "6-Graphic_design",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/6-Graphic_design.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "7-Instagram_Algorithm",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/7-Instagram_Algorithm.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "8-Content_Creation",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/8-Content_Creation.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "9-Content_Writing",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/9-Content_Writing.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "10-Videography",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/10-Videography.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+    {
+      title: "11-Video_Editing",
+      src: "https://storage.googleapis.com/fullstackcreator/videos/11-Video_Editing.mp4",
+      type: "video/mp4",
+      size: 1080,
+    },
+
     // Add more videos as needed
   ];
 
