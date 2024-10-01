@@ -1,6 +1,12 @@
 "use client";
-import Plyr from "plyr-react";
-import "plyr-react/plyr.css";
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Plyr component with no SSR
+const Plyr = dynamic(() => import('plyr-react'), {
+  ssr: false, // Disable server-side rendering for this component
+});
+
+import 'plyr-react/plyr.css'; // Import the Plyr CSS
 import { useState } from "react";
 
 /**
