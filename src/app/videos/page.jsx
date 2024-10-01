@@ -155,20 +155,6 @@ export default function VideoList() {
     }
   }, [email]); // email is the dependency here
 
-  // Function to go to the previous video
-  const handlePrev = () => {
-    setCurrentVideoIndex((prevIndex) =>
-      prevIndex === 0 ? videos.length - 1 : prevIndex - 1,
-    );
-  };
-
-  // Function to go to the next video
-  const handleNext = () => {
-    console.log("next triggered");
-    setCurrentVideoIndex((prevIndex) =>
-      prevIndex === videos.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
 
   // Render logic based on loading, error, and payment status
   if (loading) {
@@ -188,6 +174,21 @@ export default function VideoList() {
       </div>
     );
   }
+
+  // Function to go to the previous video
+  const handlePrev = () => {
+    setCurrentVideoIndex((prevIndex) =>
+      prevIndex === 0 ? videos.length - 1 : prevIndex - 1,
+    );
+  };
+
+  // Function to go to the next video
+  const handleNext = () => {
+    console.log("next triggered");
+    setCurrentVideoIndex((prevIndex) =>
+      prevIndex === videos.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
 
   return (
     <>
