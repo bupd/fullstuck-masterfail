@@ -69,7 +69,7 @@ const CheckPaidUser = ({ children }) => {
 
   // Render logic based on loading, error, and payment status
   if (loading) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   if (error) {
