@@ -38,7 +38,7 @@ export default function Home() {
   // Add 4 days
   useEffect(() => {
     const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 3);
+    targetDate.setDate(targetDate.getDate() + 7);
 
     setTargetDate(targetDate);
   }, []);
