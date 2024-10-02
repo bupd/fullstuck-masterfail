@@ -72,7 +72,7 @@ export default function VideoList() {
     },
     {
       thumbnail: "/8Content creation.JPG",
-      title: "8-Content_Creation",
+      title: "8-Conten_Creation",
       src: "https://storage.googleapis.com/fullstackcreator/videos/8-Content_Creation.mp4",
       type: "video/mp4",
       size: 1080,
