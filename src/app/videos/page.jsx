@@ -22,66 +22,77 @@ export default function VideoList() {
   // Define an array of video sources
   const videos = [
     {
+      thumbnail: "/1Mindset.jpg",
       title: "1-Mindset",
       src: "https://storage.googleapis.com/fullstackcreator/videos/1-Mindset.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/2Business.jpg",
       title: "2-Business",
       src: "https://storage.googleapis.com/fullstackcreator/videos/2-Business.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/3Marketing.JPG",
       title: "3-Marketing",
       src: "https://storage.googleapis.com/fullstackcreator/videos/3-Marketing.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/4Sales.jpg",
       title: "4-Sales",
       src: "https://storage.googleapis.com/fullstackcreator/videos/4-Sales.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/5Branding.jpg",
       title: "5-Branding",
       src: "https://storage.googleapis.com/fullstackcreator/videos/5-Branding.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/6GRAPHIC DESIGN.jpg",
       title: "6-Graphic_design",
       src: "https://storage.googleapis.com/fullstackcreator/videos/6-Graphic_design.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/7Instagram algorithm.JPG",
       title: "7-Instagram_Algorithm",
       src: "https://storage.googleapis.com/fullstackcreator/videos/7-Instagram_Algorithm.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/8Content creation.JPG",
       title: "8-Content_Creation",
       src: "https://storage.googleapis.com/fullstackcreator/videos/8-Content_Creation.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/9CONTENT WRITING.JPG",
       title: "9-Content_Writing",
       src: "https://storage.googleapis.com/fullstackcreator/videos/9-Content_Writing.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/10Videogrphy.jpg",
       title: "10-Videography",
       src: "https://storage.googleapis.com/fullstackcreator/videos/10-Videography.mp4",
       type: "video/mp4",
       size: 1080,
     },
     {
+      thumbnail: "/11Editing.JPG",
       title: "11-Video_Editing",
       src: "https://storage.googleapis.com/fullstackcreator/videos/11-Video_Editing.mp4",
       type: "video/mp4",
@@ -155,14 +166,17 @@ export default function VideoList() {
     }
   }, [email]); // email is the dependency here
 
-
   // Render logic based on loading, error, and payment status
   if (loading) {
     return <div>Loading...</div>;
   }
 
   if (error) {
-    return <div className="text-5xl font-bold text-center my-auto h-svh w-screen mx-auto underline decoration-red-500 decoration-wavy"><h1 className="my-auto pt-40">{error}</h1></div>;
+    return (
+      <div className="text-5xl font-bold text-center my-auto h-svh w-screen mx-auto underline decoration-red-500 decoration-wavy">
+        <h1 className="my-auto pt-40">{error}</h1>
+      </div>
+    );
   }
 
   if (!isPaidUser) {
@@ -212,7 +226,16 @@ export default function VideoList() {
           autoPlay
           onEnded={handleNext} // Automatically go to next video when current one ends
           autoFocus
+          poster={[videos[currentVideoIndex]].thumbnail}
+          title={[videos[currentVideoIndex].title]}
           source={{
+            // some error is popping
+            // previewThumbnails: {
+            //   enabled: true,
+            //   src: [videos[currentVideoIndex].thumbnail],
+            // },
+            poster: [videos[currentVideoIndex].thumbnail],
+
             type: "video",
             sources: [videos[currentVideoIndex]],
           }}
