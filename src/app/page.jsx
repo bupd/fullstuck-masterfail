@@ -9,8 +9,11 @@ import Footer from "./Footer";
 import CheckPaidUser from "./checkPaidUser";
 import { useEffect, useState } from "react";
 import CountdownTimer from "./CountDownTimer";
+import Countdown from "react-countdown";
 // import VideoPlayer from "@/components/VideoPlayer";
 export default function Home() {
+  const [targetDate, setTargetDate] = useState("2024-12-31T23:59:59");
+
   // Function to format date in dd/mmm/yy format
   function formatDate(date) {
     const day = date.getDate();
@@ -27,9 +30,12 @@ export default function Home() {
   const DateOfSaleEnd = formattedDate;
 
   // Add 4 days
-  today.setDate(today.getDate() + 5);
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 3);
 
-  var targetDate = today;
+    setTargetDate(targetDate);
+  }, []);
 
   // Format and display the new date
 
@@ -62,11 +68,43 @@ export default function Home() {
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [targetDate]);
 
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render something when the countdown reaches zero
+      return <span>Time's up!</span>;
+    } else {
+      // Render the countdown
+      return (
+        <div>
+          <div className="my-8 font-semibold grid grid-cols-4 gap-4 px-4 text-center text-white">
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{days}</h1>
+              <p className="text-sm font-thin">days</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{hours}</h1>
+              <p className="text-sm font-thin">hours</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{minutes}</h1>
+              <p className="text-sm font-thin">minutes</p>
+            </div>
+            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
+              <h1 className="text-center text-4xl">{seconds}</h1>
+              <p className="text-sm font-thin">seconds</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
 
   const previousRate = "2500";
   const rate = "999";
   return (
     <>
+      <div></div>
+
       <div className="bg-neutral-950">
         <div className="max-w-screen-xl mx-auto font-sans bg-neutral-950 text-white overflow-hidden">
           <div className="text-2xl my-8 font-bold mx-auto w-fit text-center uppercase">
@@ -172,26 +210,8 @@ export default function Home() {
             <h1>Offer ends in</h1>
           </div>
 
-          <div className="my-8 font-semibold grid grid-cols-4 gap-4 px-4 text-center text-white">
-            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{days}</h1>
-              <p className="text-sm font-thin">days</p>
-            </div>
-            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{hours}</h1>
-              <p className="text-sm font-thin">hours</p>
-            </div>
-            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{minutes}</h1>
-              <p className="text-sm font-thin">minutes</p>
-            </div>
-            <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{timeRemaining.seconds}</h1>
-              <p className="text-sm font-thin">seconds</p>
-            </div>
-          </div>
+          <Countdown date={targetDate} renderer={renderer} />
 
-          <CountdownTimer targetDate={new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000)} />
         </div>
       </div>
       <div className="bg-slate-900">
