@@ -3,6 +3,7 @@ import db from "@/firestore";
 import getCurrentUserEmail from "@/getCurrentUser";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
+import RedirectAndOpenTab from "./RedirectandOpenTab";
 
 export default function Page() {
   const [isPaidUser, setIsPaidUser] = useState(false); // State to track if user has paid
@@ -79,7 +80,12 @@ export default function Page() {
 
   if (!isPaidUser) {
     return <div>You do not have access to view this content.</div>;
+  } else {
+    return <RedirectAndOpenTab isPaidUser={isPaidUser} />
   }
+
+
+
 
   return (
     <div>
