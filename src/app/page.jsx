@@ -6,12 +6,65 @@ import "@vidstack/react/player/styles/plyr/theme.css";
 import "@vidstack/react/player/styles/default/layouts/video.css";
 import SwiperCard from "@/components/SwiperCard";
 import Footer from "./Footer";
+import CheckPaidUser from "./checkPaidUser";
+import { useEffect, useState } from "react";
+import CountdownTimer from "./CountDownTimer";
 // import VideoPlayer from "@/components/VideoPlayer";
 export default function Home() {
+  // Function to format date in dd/mmm/yy format
+  function formatDate(date) {
+    const day = date.getDate();
+    const month = date.toLocaleString("default", { month: "short" });
+    const year = date.getFullYear().toString().slice(-2); // Get last two digits of year
+
+    return `${String(day).padStart(2, "0")}/${month}/${year}`;
+  }
+
+  // Get today's date
+  const today = new Date();
+
+  const formattedDate = formatDate(today);
+  const DateOfSaleEnd = formattedDate;
+
+  // Add 4 days
+  today.setDate(today.getDate() + 5);
+
+  var targetDate = today;
+
+  // Format and display the new date
+
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: 4,
+    hours: 23,
+    minutes: 9,
+    seconds: 52,
+  });
+
+  const { days, hours, minutes, seconds } = timeRemaining;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const timeDifference = new Date(targetDate) - now;
+
+      if (timeDifference > 0) {
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+        const seconds = Math.floor((timeDifference / 1000) % 60);
+
+        setTimeRemaining({ days, hours, minutes, seconds });
+      } else {
+        clearInterval(interval); // Stop the timer when the countdown reaches zero
+      }
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [targetDate]);
+
+
   const previousRate = "2500";
   const rate = "999";
-  const days = "99";
-  const DateOfSaleEnd = "23 Jun 24";
   return (
     <>
       <div className="bg-neutral-950">
@@ -24,6 +77,18 @@ export default function Home() {
             <h1>Full Stack Creator</h1>
             <h1>Masterclass</h1>
           </div>
+
+          <CheckPaidUser>
+            <div className="text-2xl my-8 font-bold mx-auto w-fit text-center">
+              <a href="/videos">
+                <div className="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
+                  <span className="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-2xl">
+                    Go To Course {" ➡️"}
+                  </span>
+                </div>
+              </a>
+            </div>
+          </CheckPaidUser>
 
           <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
             <iframe
@@ -86,7 +151,7 @@ export default function Home() {
             <span className="line-through text-slate-300 text-lg">
               Price: ₹5999
             </span>
-            <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
+            <a href="https://payments.cashfree.com/forms/fullstackcreator-payment">
               <div className="bg-action rounded-2xl mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
                 <span className="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
                   Join Now
@@ -113,18 +178,20 @@ export default function Home() {
               <p className="text-sm font-thin">days</p>
             </div>
             <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{days}</h1>
+              <h1 className="text-center text-4xl">{hours}</h1>
               <p className="text-sm font-thin">hours</p>
             </div>
             <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{days}</h1>
+              <h1 className="text-center text-4xl">{minutes}</h1>
               <p className="text-sm font-thin">minutes</p>
             </div>
             <div className="bg-indigo-950 rounded-xl h-[100px] flex flex-col items-center justify-center">
-              <h1 className="text-center text-4xl">{days}</h1>
+              <h1 className="text-center text-4xl">{timeRemaining.seconds}</h1>
               <p className="text-sm font-thin">seconds</p>
             </div>
           </div>
+
+          <CountdownTimer targetDate={new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000)} />
         </div>
       </div>
       <div className="bg-slate-900">
@@ -526,11 +593,8 @@ export default function Home() {
             thriving business. Join the Full Stack Creator Masterclass and
             transform your creative journey today.
           </p>
-          <a href="https://payments-test.cashfree.com/forms/fullstacktest-pay">
-            <div
-              href="https://payments-test.cashfree.com/forms/fullstacktest-pay"
-              className="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50"
-            >
+          <a href="https://payments.cashfree.com/forms/fullstackcreator-payment">
+            <div className="bg-action rounded-2xl max-w-xl mx-auto mt-4 mb-8 hover:scale-110 transition-all ease-in-out duration-700 hover:shadow-lg hover:cursor-pointer drop-shadow-lg hover:shadow-yellow-50">
               <span className="flex flex-row gap-2 justify-center items-center px-8 py-4 h-full text-white font-bold text-lg">
                 Join Now
                 <span className="text-2xl"> ₹999 only </span>
