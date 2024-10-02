@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import "@vidstack/react/player/styles/default/theme.css";
 import "@vidstack/react/player/styles/base.css";
 import "@vidstack/react/player/styles/plyr/theme.css";
@@ -9,8 +10,13 @@ import Footer from "./Footer";
 import CheckPaidUser from "./checkPaidUser";
 import { useEffect, useState } from "react";
 import CountdownTimer from "./CountDownTimer";
+import "plyr-react/plyr.css"; // Import the Plyr CSS
 import Countdown from "react-countdown";
-// import VideoPlayer from "@/components/VideoPlayer";
+// Dynamically import the Plyr component with no SSR
+const Plyr = dynamic(() => import("plyr-react"), {
+  ssr: false, // Disable server-side rendering for this component
+});
+
 export default function Home() {
   const [targetDate, setTargetDate] = useState("2024-12-31T23:59:59");
 
@@ -129,11 +135,10 @@ export default function Home() {
           </CheckPaidUser>
 
           <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
-            <iframe
-              className="lg:rounded-3xl rounded-2xl"
-              src="https://drive.google.com/file/d/1phQeoBcc_bokaQZcXnz9uHBG5BB6Y4MA/preview"
-              allow="autoplay"
-            ></iframe>
+            <video className="rounded-3xl" autoPlay autoFocus muted controls>
+              <source src="https://storage.googleapis.com/fullstackcreator/videos/promo.mp4" type="video/mp4" />
+            </video>
+
             {/*
             // <MediaPlayer title="promo" src="youtube/IvqNxxRlpP0">
             //   <MediaProvider />
@@ -211,7 +216,6 @@ export default function Home() {
           </div>
 
           <Countdown date={targetDate} renderer={renderer} />
-
         </div>
       </div>
       <div className="bg-slate-900">
