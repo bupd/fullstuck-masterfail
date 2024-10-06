@@ -136,7 +136,7 @@ export default function Home() {
 
           <div className="max-w-screen-lg flex flex-col gap-10 mx-auto p-8">
             <video className="rounded-3xl" autoPlay autoFocus muted controls>
-              <source src="https://storage.googleapis.com/fullstackcreator/videos/promo.mp4" type="video/mp4" />
+              <source src="https://storage.googleapis.com/fullstackcreator-storage/videos/promo.mp4" type="video/mp4" />
             </video>
 
             {/*
