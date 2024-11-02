@@ -68,14 +68,13 @@ export default function SwiperCard() {
       <SwiperSlide className="pb-8">
         <div className="bg-white text-slate-600 text-xl shadow-2xl p-8 h-64 w-full rounded-3xl flex flex-col justify-between text-left">
           <p>
-            As a seasoned designer always on the lookout for innovative tools,
-            Framer.com instantly grabbed my attention..
+            Neenga kudutha assets use Panni edit panna bro....neraiya time save
+            agudhu.
           </p>
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400">Dawson Tech</h4>
+              <h2 className="text-xl font-semibold pb-1">Nitish</h2>
             </div>
           </div>
         </div>
@@ -84,14 +83,13 @@ export default function SwiperCard() {
         {/* card component */}
         <div className="bg-white text-slate-600 text-xl shadow-2xl p-8 h-64 w-80 rounded-3xl flex flex-col justify-between gap-4 text-left">
           <p>
-            I was amazed at how quickly we were able to integrate this app into
-            our workflow.
+            Customer data collect pandradhum & client onboard pandradhum reveal
+            pannadhuku thanks 👍🏻.
           </p>
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400 text-lg">Dawson Tech</h4>
+              <h2 className="text-xl font-semibold pb-1">Gayathri</h2>
             </div>
           </div>
         </div>
@@ -99,14 +97,13 @@ export default function SwiperCard() {
       <SwiperSlide className="pb-8">
         <div className="bg-white text-xl text-slate-600 shadow-2xl p-8 h-64 w-full rounded-3xl flex flex-col justify-between text-left">
           <p>
-            As a seasoned designer always on the lookout for innovative tools,
-            Framer.com instantly grabbed my attention..
+            Bro naan patha varaikum 999rs ku inthana skills neenga dhan first
+            time solli tharinga
           </p>
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400">Dawson Tech</h4>
+              <h2 className="text-xl font-semibold pb-1">Pradeep</h2>
             </div>
           </div>
         </div>
@@ -115,29 +112,48 @@ export default function SwiperCard() {
         {/* card component */}
         <div className="bg-white text-xl shadow-2xl p-8 text-slate-600 h-64 w-80 rounded-3xl flex flex-col justify-between gap-4 text-left">
           <p>
-            I was amazed at how quickly we were able to integrate this app into
-            our workflow.
+            I done 5 designs within 2hrs for my first client & i charged around
+            600rs, this is huge for me in just 2hours
           </p>
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400 text-lg">Dawson Tech</h4>
+              <h2 className="text-xl font-semibold pb-1">Vinitha</h2>
             </div>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide className="pb-8">
         <div className="bg-white text-xl shadow-2xl p-8 h-64 w-full text-slate-600 rounded-3xl flex flex-col justify-between text-left">
-          <p>
-            As a seasoned designer always on the lookout for innovative tools,
-            Framer.com instantly grabbed my attention..
-          </p>
+          <div className="max-h-fit py-10">
+            <img className="h-20" src="/testimonial_special.jpeg" />
+          </div>
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400">Dawson Tech</h4>
+              <h2 className="text-xl font-semibold pb-1">Syed Ijaz</h2>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="bg-white text-xl shadow-2xl text-slate-600 p-4 h-64 w-72 rounded-3xl flex flex-col justify-between gap-4 text-left">
+          <img className="h-32" src="/tes_spec1.jpeg" />
+          <div className="flex flex-row gap-2 items-center justify-start">
+            <img className="w-12" src="/pr.jpg" />
+            <div>
+              <h2 className="text-xl font-semibold">Syed Ijaz</h2>
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="bg-white text-xl shadow-2xl text-slate-600 p-4 h-64 w-72 rounded-3xl flex flex-col justify-between text-left">
+          <img className="h-32 w-full" src="/tes_spec2.jpeg" />
+          <div className="flex flex-row items-center justify-start">
+            <img className="w-12" src="/pr.jpg" />
+            <div>
+              <h2 className="text-xl font-semibold">Syed Ijaz</h2>
             </div>
           </div>
         </div>
@@ -145,10 +161,7 @@ export default function SwiperCard() {
       <SwiperSlide className="pb-8">
         {/* card component */}
         <div className="bg-white text-xl shadow-2xl text-slate-600 p-8 h-64 w-80 rounded-3xl flex flex-col justify-between gap-4 text-left">
-          <p>
-            I was amazed at how quickly we were able to integrate this app into
-            our workflow.
-          </p>
+          <img className="w-20" src="/tes_spec2.jpeg" />
           <div className="flex flex-row gap-2 items-center justify-start">
             <img className="w-12" src="/pr.jpg" />
             <div>
