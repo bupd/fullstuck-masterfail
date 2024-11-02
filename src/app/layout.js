@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import {
@@ -19,6 +20,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const GID = process.env.NEXT_PUBLIC_GID
 
 export const metadata = {
   title: "Full Stack Creator Masterclass",
@@ -43,6 +45,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
         </body>
+        <GoogleAnalytics gaId={GID} />
       </html>
     </ClerkProvider>
   );
