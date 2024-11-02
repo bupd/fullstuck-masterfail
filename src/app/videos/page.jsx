@@ -59,7 +59,7 @@ export default function VideoList() {
     {
       thumbnail: "/6GRAPHIC DESIGN.jpg",
       title: "6-Graphic_design",
-      src: "https://storage.googleapis.com/fullstackcreator-storage/videos/6-Graphic_design.mp4",
+      src: "https://storage.googleapis.com/fullstackcreator-storage/videos/6-Graphic_Design.mp4",
       type: "video/mp4",
       size: 1080,
     },
