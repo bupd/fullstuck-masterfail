@@ -123,19 +123,6 @@ export default function SwiperCard() {
           </div>
         </div>
       </SwiperSlide>
-      <SwiperSlide className="pb-8">
-        <div className="bg-white text-xl shadow-2xl p-8 h-64 w-full text-slate-600 rounded-3xl flex flex-col justify-between text-left">
-          <div className="max-h-fit py-10">
-            <img className="h-20" src="/testimonial_special.jpeg" />
-          </div>
-          <div className="flex flex-row gap-2 items-center justify-start">
-            <img className="w-12" src="/pr.jpg" />
-            <div>
-              <h2 className="text-xl font-semibold pb-1">Syed Ijaz</h2>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
       <SwiperSlide>
         <div className="bg-white text-xl shadow-2xl text-slate-600 p-4 h-64 w-72 rounded-3xl flex flex-col justify-between gap-4 text-left">
           <img className="h-32" src="/tes_spec1.jpeg" />
@@ -154,19 +141,6 @@ export default function SwiperCard() {
             <img className="w-12" src="/pr.jpg" />
             <div>
               <h2 className="text-xl font-semibold">Syed Ijaz</h2>
-            </div>
-          </div>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className="pb-8">
-        {/* card component */}
-        <div className="bg-white text-xl shadow-2xl text-slate-600 p-8 h-64 w-80 rounded-3xl flex flex-col justify-between gap-4 text-left">
-          <img className="w-20" src="/tes_spec2.jpeg" />
-          <div className="flex flex-row gap-2 items-center justify-start">
-            <img className="w-12" src="/pr.jpg" />
-            <div>
-              <h2 className="text-xl font-semibold">Casey Jordan</h2>
-              <h4 className="text-slate-400 text-lg">Dawson Tech</h4>
             </div>
           </div>
         </div>
