@@ -18,7 +18,8 @@ const Plyr = dynamic(() => import("plyr-react"), {
 });
 
 export default function Home() {
-  const [targetDate, setTargetDate] = useState("2024-12-31T23:59:59");
+  // set insanely high number to not freeze the things
+  const [targetDate, setTargetDate] = useState("2999-12-31T23:59:59");
 
   // Function to format date in dd/mmm/yy format
   function formatDate(date) {
