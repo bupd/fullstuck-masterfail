@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
+import Script from 'next/script'
 import Navbar from "@/components/Navbar";
 import {
   ClerkProvider,
