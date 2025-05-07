@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import {
@@ -20,7 +20,7 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-const GID = process.env.NEXT_PUBLIC_GID
+const GID = process.env.NEXT_PUBLIC_GID;
 
 export const metadata = {
   title: "Full Stack Creator Masterclass",
@@ -42,6 +42,23 @@ export default function RootLayout({ children }) {
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          {/* Load Facebook Pixel via next/script */}
+          <Script id="facebook-pixel" strategy="afterInteractive">
+            {`
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '9675470295819314');
+              fbq('track', 'PageView');
+            `}
+          </Script>
+
+          {/* Fallback for no-JS */}
           <Navbar />
           {children}
         </body>
